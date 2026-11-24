@@ -9,7 +9,18 @@
 <meta property="og:title" content="Federico Croletti — Siti web e soluzioni digitali">
 <meta property="og:description" content="Il tuo lavoro merita di essere visto come si deve. Scrivimi su WhatsApp e raccontami la tua idea.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://federicocroletti-tech.github.io/federico-link-in-bio/">
+<meta property="og:image" content="https://federicocroletti-tech.github.io/federico-link-in-bio/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Federico Croletti — siti web e soluzioni digitali a Milano">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://federicocroletti-tech.github.io/federico-link-in-bio/">
 <link rel="icon" href="favicon.ico">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Federico Croletti","description":"Siti web, landing page e assistenza informatica per professionisti e piccole attività a Milano e dintorni.","url":"https://federicocroletti-tech.github.io/federico-link-in-bio/","image":"https://federicocroletti-tech.github.io/federico-link-in-bio/assets/federico.webp","telephone":"+393894658277","areaServed":{"@type":"City","name":"Milano"},"sameAs":["https://www.instagram.com/federico.croletti.tech/","https://federico-croletti-site.onrender.com/","https://github.com/federicocroletti-tech"]}
+</script>
 <style>
 @font-face{font-family:"Plus Jakarta Sans";src:url(assets/fonts/plus-jakarta-sans-latin.woff2) format("woff2");font-weight:200 800;font-display:swap}
 @font-face{font-family:"Source Serif 4";src:url(assets/fonts/source-serif-4-latin.woff2) format("woff2");font-weight:200 900;font-display:swap}
@@ -73,6 +84,10 @@ textarea{min-height:100px;resize:vertical}
 .done p{font-size:16px;margin:0 0 6px}
 .done a{color:var(--green);font-weight:700}
 
+.quote{margin:0 0 14px;padding:18px 20px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:16px;background:#0e202b}
+.quote p{margin:0 0 10px;font-size:17px}
+.quote cite{display:block;font:600 13px var(--sans);color:var(--accent-strong);font-style:normal}
+
 footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 0 14px}
 
 @media(max-width:600px){
@@ -97,7 +112,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 0 14px}
     <div class="kicker">Federico Croletti · Siti web e soluzioni digitali</div>
     <h1>Il tuo lavoro merita di essere visto come si deve.</h1>
     <p>Sono Federico, sviluppatore frontend a Milano. Costruisco siti e strumenti digitali per professionisti e piccole attività. Ti racconto come lavoro e come potrei aiutarti.</p>
-    <a class="btn" href="#contatti">Parliamone</a>
+    <a class="btn" href="#contatti" data-track="cta_hero">Parliamone</a>
   </div>
 </section>
 
@@ -125,20 +140,25 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 0 14px}
 <section class="section">
   <h2>Cosa ho realizzato</h2>
   <div class="projects">
-    <a class="project" href="https://daniel-pantuso-giardiniere-site.onrender.com/" target="_blank" rel="noopener">
+    <a class="project" href="https://daniel-pantuso-giardiniere-site.onrender.com/" target="_blank" rel="noopener" data-track="project_click" data-track-name="daniel-pantuso">
       <strong>Daniel Pantuso · Giardiniere a Milano</strong>
       <span>Sito vetrina con servizi, lavori e richiesta di preventivo via WhatsApp.</span>
     </a>
-    <a class="project" href="https://menu-smart-qr.onrender.com/" target="_blank" rel="noopener">
+    <a class="project" href="https://menu-smart-qr.onrender.com/" target="_blank" rel="noopener" data-track="project_click" data-track-name="menu-smart-qr">
       <em>DEMO</em>
       <strong>Menu Smart QR</strong>
       <span>Menu digitale per smartphone: lingue, piatti, prezzi e contatti rapidi.</span>
     </a>
-    <a class="project" href="https://federico-croletti-site.onrender.com/" target="_blank" rel="noopener">
+    <a class="project" href="https://federico-croletti-site.onrender.com/" target="_blank" rel="noopener" data-track="project_click" data-track-name="portfolio">
       <strong>Il mio portfolio completo</strong>
       <span>Tutti i progetti, le demo e i servizi in un unico posto.</span>
     </a>
   </div>
+</section>
+
+<section class="section" id="testimonianze" hidden>
+  <h2>Cosa dicono di me</h2>
+  <div id="testimonialList"></div>
 </section>
 
 <section class="section formCard" id="contatti">
@@ -169,7 +189,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 0 14px}
     <div class="field"><label for="messaggio">Raccontami la tua idea</label><textarea id="messaggio" name="messaggio" placeholder="Raccontamelo con le tue parole…"></textarea></div>
 
     <button class="btn" type="submit">💬 Scrivimi su WhatsApp</button>
-    <p class="small">Si aprirà WhatsApp con il messaggio già scritto: lo invii tu, solo se e quando vuoi. Non salvo nessun dato su questa pagina.</p>
+    <p class="small">Si aprirà WhatsApp con il messaggio già scritto: lo invii tu, solo se e quando vuoi. Non salvo i dati del form; raccolgo solo statistiche di visita anonime, senza cookie.</p>
   </form>
 
   <div class="done" id="done" role="status" aria-live="polite">
@@ -183,9 +203,63 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 0 14px}
 <script>
 (function () {
   var WA_NUMBER = "393894658277";
+  // Statistiche anonime Plausible: nessun cookie, solo i parametri utm_* nell'URL.
+  var ANALYTICS = { domain: "federicocroletti-tech.github.io", endpoint: "https://plausible.io/api/event" };
+  // Aggiungere solo testimonianze reali e autorizzate: { text: "...", author: "Nome", role: "Attività" }
+  var TESTIMONIALS = [];
+
   var form = document.getElementById("contact");
   var done = document.getElementById("done");
   var waLink = document.getElementById("waLink");
+
+  function pageUrl() {
+    var params = new URLSearchParams(location.search);
+    var kept = new URLSearchParams();
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach(function (k) {
+      if (params.get(k)) kept.set(k, params.get(k));
+    });
+    var query = kept.toString();
+    return location.origin + location.pathname + (query ? "?" + query : "");
+  }
+
+  function referrerOrigin() {
+    try { return document.referrer ? new URL(document.referrer).origin : undefined; } catch (e) { return undefined; }
+  }
+
+  function track(name, props) {
+    if (location.hostname !== ANALYTICS.domain) return;
+    if (navigator.doNotTrack === "1" || navigator.globalPrivacyControl) return;
+    var body = { name: name, url: pageUrl(), domain: ANALYTICS.domain, referrer: referrerOrigin() };
+    if (props) body.props = props;
+    try {
+      fetch(ANALYTICS.endpoint, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(body), keepalive: true })
+        .catch(function () {});
+    } catch (e) {}
+  }
+
+  track("pageview");
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest ? e.target.closest("[data-track]") : null;
+    if (!el) return;
+    var name = el.getAttribute("data-track-name");
+    track(el.getAttribute("data-track"), name ? { name: name } : undefined);
+  });
+
+  if (TESTIMONIALS.length) {
+    var list = document.getElementById("testimonialList");
+    TESTIMONIALS.forEach(function (t) {
+      var block = document.createElement("blockquote");
+      block.className = "quote";
+      var text = document.createElement("p");
+      text.textContent = "“" + t.text + "”";
+      var cite = document.createElement("cite");
+      cite.textContent = t.author + (t.role ? " · " + t.role : "");
+      block.appendChild(text);
+      block.appendChild(cite);
+      list.appendChild(block);
+    });
+    document.getElementById("testimonianze").hidden = false;
+  }
 
   function value(name) {
     var el = form.elements[name];
@@ -212,6 +286,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 0 14px}
 
     var url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
     waLink.href = url;
+    track("form_submit");
     done.classList.add("show");
     done.scrollIntoView({ behavior: "smooth", block: "nearest" });
 

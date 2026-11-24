@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Biglietto da visita 85x55 mm</title>
+<style>
+@font-face{font-family:"Plus Jakarta Sans";src:url(../../assets/fonts/plus-jakarta-sans-latin.woff2) format("woff2");font-weight:200 800}
+@font-face{font-family:"Source Serif 4";src:url(../../assets/fonts/source-serif-4-latin.woff2) format("woff2");font-weight:200 900}
+@page{size:85mm 55mm;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:85mm;height:55mm;overflow:hidden;position:relative;page-break-after:always;background:linear-gradient(135deg,#112531,#0b1821);color:#edf6f8;font-family:"Plus Jakarta Sans",sans-serif;padding:6mm}
+.page:last-child{page-break-after:auto}
+.page:before{content:"";position:absolute;right:-14mm;top:-16mm;width:50mm;height:50mm;border-radius:50%;background:#58c6a2;opacity:.1}
+.front{display:flex;flex-direction:column;justify-content:space-between}
+.logo{background:#fff;border-radius:2.4mm;padding:1.4mm 2.4mm;align-self:flex-start;position:relative}
+.logo img{height:8mm;width:auto;display:block}
+h1{font-family:"Source Serif 4",serif;font-size:15pt;font-weight:600;margin:0;line-height:1.1;position:relative}
+.role{font-size:6.8pt;color:#7ee4be;font-weight:700;letter-spacing:.35mm;text-transform:uppercase;margin-top:1.2mm;position:relative}
+.contacts{font-size:7.2pt;line-height:1.55;color:#dbe9e6;position:relative}
+.contacts b{color:#fff}
+.back{display:flex;align-items:center;gap:5mm}
+.qr{width:33mm;height:33mm;background:#fff;border-radius:2.6mm;padding:2mm;flex:none;position:relative}
+.qr img{width:100%;height:100%;display:block}
+.cta{position:relative}
+.cta strong{display:block;font-family:"Source Serif 4",serif;font-size:11.5pt;font-weight:600;line-height:1.15}
+.cta span{display:block;font-size:6.8pt;color:#cbd8d2;margin-top:2mm;line-height:1.5}
+</style>
+</head>
+<body>
+<section class="page front">
+  <div class="logo"><img src="../../assets/logo.webp" alt=""></div>
+  <div>
+    <h1>Federico Croletti</h1>
+    <div class="role">Siti web · Assistenza informatica</div>
+  </div>
+  <div class="contacts">
+    <b>WhatsApp</b> +39 389 465 8277<br>
+    <b>Instagram</b> @federico.croletti.tech<br>
+    Milano e dintorni
+  </div>
+</section>
+<section class="page back">
+  <div class="qr"><img src="../qr/biglietto.svg" alt="QR code"></div>
+  <div class="cta">
+    <strong>Il tuo lavoro merita di essere visto come si deve.</strong>
+    <span>Inquadra il codice per conoscermi e scrivermi su WhatsApp.</span>
+  </div>
+</section>
+</body>
+</html>

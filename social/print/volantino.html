@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Volantino A5</title>
+<style>
+@font-face{font-family:"Plus Jakarta Sans";src:url(../../assets/fonts/plus-jakarta-sans-latin.woff2) format("woff2");font-weight:200 800}
+@font-face{font-family:"Source Serif 4";src:url(../../assets/fonts/source-serif-4-latin.woff2) format("woff2");font-weight:200 900}
+@page{size:148mm 210mm;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:148mm;height:210mm;overflow:hidden;position:relative;background:linear-gradient(160deg,#112531,#0b1821);color:#edf6f8;font-family:"Plus Jakarta Sans",sans-serif;padding:14mm 13mm;display:flex;flex-direction:column}
+.page:before{content:"";position:absolute;right:-40mm;top:-30mm;width:120mm;height:120mm;border-radius:50%;background:#58c6a2;opacity:.09}
+.logo{background:#fff;border-radius:3.4mm;padding:2mm 3.4mm;align-self:flex-start;position:relative}
+.logo img{height:11mm;width:auto;display:block}
+.kicker{margin-top:12mm;color:#7ee4be;font-weight:700;font-size:8.5pt;letter-spacing:.6mm;text-transform:uppercase;position:relative}
+h1{font-family:"Source Serif 4",serif;font-size:29pt;line-height:1.08;font-weight:600;margin:4mm 0 5mm;position:relative}
+.lead{font-size:11.5pt;line-height:1.5;color:#cbd8d2;margin:0 0 7mm;position:relative}
+ul{list-style:none;margin:0;padding:0;position:relative}
+li{display:flex;gap:3.4mm;align-items:flex-start;font-size:11pt;line-height:1.35;margin-bottom:3.6mm}
+li:before{content:"";flex:none;width:2.6mm;height:2.6mm;margin-top:1.4mm;border-radius:50%;background:#58c6a2}
+li b{display:block;color:#fff}
+li span{color:#a9bdb8;font-size:9.5pt}
+.bottom{margin-top:auto;display:flex;align-items:center;gap:7mm;background:#f5fbfd;color:#10202b;border-radius:5mm;padding:6mm;position:relative}
+.qr{width:38mm;height:38mm;flex:none}
+.qr img{width:100%;height:100%;display:block}
+.bottom strong{display:block;font-family:"Source Serif 4",serif;font-size:15pt;line-height:1.15;font-weight:600}
+.bottom p{margin:2.4mm 0 0;font-size:9.5pt;line-height:1.5;color:#33495a}
+.bottom p b{color:#10202b}
+</style>
+</head>
+<body>
+<section class="page">
+  <div class="logo"><img src="../../assets/logo.webp" alt=""></div>
+  <div class="kicker">Federico Croletti · Milano e dintorni</div>
+  <h1>Il tuo lavoro merita di essere visto come si deve.</h1>
+  <p class="lead">Costruisco siti e strumenti digitali per professionisti e piccole attività, e do una mano con i problemi informatici di ogni giorno.</p>
+  <ul>
+    <li><div><b>Siti vetrina e landing page</b><span>Per presentare la tua attività e farti contattare in modo semplice.</span></div></li>
+    <li><div><b>Assistenza informatica</b><span>PC e notebook, posta e PEC, SPID, smartphone, sicurezza di base.</span></div></li>
+    <li><div><b>Soluzioni su misura</b><span>WordPress, integrazioni di contatto, piccoli strumenti digitali.</span></div></li>
+  </ul>
+  <div class="bottom">
+    <div class="qr"><img src="../qr/volantino.svg" alt="QR code"></div>
+    <div>
+      <strong>Raccontami la tua idea.</strong>
+      <p>Inquadra il codice e scrivimi su WhatsApp:<br><b>+39 389 465 8277</b></p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
