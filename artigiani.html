@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Siti web per artigiani e piccole attività a Milano — Federico Croletti</title>
+<meta name="description" content="Realizzo siti semplici per artigiani e piccole attività di Milano: chi ti cerca da telefono capisce cosa fai e ti scrive su WhatsApp.">
+<meta name="theme-color" content="#0b1821">
+<meta property="og:title" content="Siti web per artigiani e piccole attività a Milano">
+<meta property="og:description" content="Chi ti cerca da telefono capisce cosa fai e ti scrive su WhatsApp. Parliamone.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://federicocroletti-tech.github.io/federico-link-in-bio/artigiani.html">
+<meta property="og:image" content="https://federicocroletti-tech.github.io/federico-link-in-bio/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://federicocroletti-tech.github.io/federico-link-in-bio/artigiani.html">
+<link rel="icon" href="favicon.ico">
+<style>
+@font-face{font-family:"Plus Jakarta Sans";src:url(assets/fonts/plus-jakarta-sans-latin.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url(assets/fonts/source-serif-4-latin.woff2) format("woff2");font-weight:200 900;font-display:swap}
+:root{
+  --bg:#0b1821;--bg-soft:#112531;--line:#21404f;
+  --ink:#edf6f8;--muted:#a9bdb8;
+  --accent:#58c6a2;--accent-strong:#7ee4be;--slate:#34495e;--green:#357662;
+  --paper:#f5fbfd;--paper-ink:#10202b;--paper-line:#cfdcd8;
+  --sans:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;color:var(--ink);font-family:var(--sans);background:linear-gradient(180deg,#0a151d 0%,var(--bg) 48%,#0e202b 100%);min-height:100vh}
+.wrap{max-width:720px;margin:auto;padding:14px}
+
+.hero{border-radius:32px;overflow:hidden;position:relative;padding:34px 30px 38px;background:linear-gradient(135deg,#112531,#0b1821);border:1px solid var(--line)}
+.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:360px;height:360px;border-radius:50%;background:var(--accent);opacity:.09}
+.brand{position:relative;display:inline-flex;background:#fff;border-radius:16px;padding:7px 12px}
+.brand img{height:34px;width:auto;display:block}
+.kicker{position:relative;margin-top:34px;font-size:12px;letter-spacing:2.2px;text-transform:uppercase;color:var(--accent-strong);font-weight:700}
+h1{position:relative;font-family:var(--serif);font-size:46px;line-height:1.06;font-weight:600;margin:13px 0}
+.hero p{position:relative;font-size:17px;line-height:1.55;margin:0;color:#dbe9e6}
+.btn{display:inline-block;width:100%;margin-top:23px;border:0;border-radius:15px;padding:16px;background:linear-gradient(135deg,#8cebc7,#58c6a2);color:#06110d;font:700 16px var(--sans);text-align:center;text-decoration:none;cursor:pointer}
+.hero .btn{position:relative;width:auto;padding:15px 26px}
+.btn:hover{filter:brightness(1.06)}
+:focus-visible{outline:3px solid #f3c969;outline-offset:3px}
+
+.section{background:var(--bg-soft);border:1px solid var(--line);border-radius:28px;padding:32px 28px;margin-top:14px}
+h2{font-family:var(--serif);font-size:31px;font-weight:600;margin:0 0 17px;line-height:1.15}
+p{font-family:var(--serif);font-size:18px;line-height:1.65;margin:0 0 15px;color:#dbe9e6}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{padding:9px 14px;border:1px solid var(--green);border-radius:999px;font-size:13px;font-weight:600;background:rgba(53,118,98,.22);color:var(--accent-strong)}
+
+.project{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:16px;padding:18px;background:#0e202b;margin-top:6px}
+.project:hover{background:#132a37}
+.project strong{display:block;font-size:17px}
+.project span{display:block;font-size:14px;line-height:1.5;color:var(--muted);margin-top:5px}
+
+ul.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;gap:14px;margin-bottom:16px}
+.list li:before{content:"";flex:none;width:10px;height:10px;margin-top:9px;border-radius:50%;background:var(--accent)}
+.list b{display:block;font-size:16px}
+.list span{display:block;font-size:14px;line-height:1.5;color:var(--muted);margin-top:2px}
+
+.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;display:flex;gap:16px;margin-bottom:18px}
+.steps li:before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font:700 15px/34px var(--sans);text-align:center}
+.steps b{display:block;font-size:16px}
+.steps span{display:block;font-size:14px;line-height:1.5;color:var(--muted);margin-top:2px}
+
+.formCard{background:var(--paper);color:var(--paper-ink);border-color:#dbe8e4}
+.formCard h2{color:var(--paper-ink)}
+.formCard p{color:#33495a}
+.field{margin-top:22px;border:0;padding:0;min-width:0}
+.field label,.field legend{display:block;font-family:var(--serif);font-size:17px;font-weight:600;margin-bottom:9px;padding:0}
+input[type=text],textarea{width:100%;border:1px solid var(--paper-line);border-radius:13px;background:#fff;color:var(--paper-ink);padding:13px;font:16px var(--sans);outline:none}
+input[type=text]:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(88,198,162,.35)}
+textarea{min-height:90px;resize:vertical}
+.field .choice{display:flex;align-items:center;gap:11px;border:1px solid var(--paper-line);border-radius:13px;padding:13px;margin:9px 0;background:#fff;font:500 15px var(--sans);cursor:pointer}
+.choice input{width:18px;height:18px;margin:0;accent-color:var(--green);flex:none}
+.choice:has(input:checked){border-color:var(--green);background:#e6f5ef}
+.small{font:12px/1.5 var(--sans)!important;color:#5b6f7a!important;margin:14px 0 0!important}
+.done{display:none;text-align:center;padding:18px;margin-top:20px;border-radius:16px;background:#e6f5ef;border:1px solid var(--green)}
+.done.show{display:block}
+.done p{font-size:16px;margin:0}
+.done a{color:var(--green);font-weight:700}
+
+footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 0 14px}
+footer a{color:var(--accent-strong)}
+
+@media(max-width:600px){
+  .wrap{padding:8px}
+  .hero{border-radius:25px;padding:26px 22px 30px}
+  h1{font-size:36px}
+  .section{padding:27px 21px;border-radius:23px}
+  h2{font-size:27px}
+  p{font-size:17px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<section class="hero">
+  <a class="brand" href="./" aria-label="Federico Croletti"><img src="assets/logo.webp" alt="Logo FC"></a>
+  <div class="kicker">Siti web per artigiani e piccole attività · Milano</div>
+  <h1>Il tuo lavoro si vede già. Fallo vedere anche online.</h1>
+  <p>Sono Federico e costruisco siti semplici per chi lavora con le mani: officine, idraulici, elettricisti, parrucchieri, giardinieri. Chi ti cerca da telefono capisce cosa fai, dove lavori e ti scrive su WhatsApp.</p>
+  <a class="btn" href="#contatti" data-track="cta_hero">Parliamone</a>
+</section>
+
+<section class="section">
+  <h2>Un esempio concreto</h2>
+  <p>Ho realizzato il sito di un giardiniere di Milano: servizi, lavori fatti e richiesta di preventivo in un unico posto, anche da telefono.</p>
+  <a class="project" href="https://daniel-pantuso-giardiniere-site.onrender.com/" target="_blank" rel="noopener" data-track="project_click" data-track-name="daniel-pantuso">
+    <strong>Daniel Pantuso · Giardiniere a Milano</strong>
+    <span>Servizi, lavori e richiesta di preventivo via WhatsApp. Aprilo dal telefono.</span>
+  </a>
+</section>
+
+<section class="section">
+  <h2>Cosa ricevi</h2>
+  <ul class="list">
+    <li><div><b>Una pagina che si legge bene dal telefono</b><span>Chi sei, cosa fai, dove lavori e alcuni dei tuoi lavori.</span></div></li>
+    <li><div><b>Pulsanti per chiamarti e scriverti su WhatsApp</b><span>Chi ha un problema ti trova subito, senza cercare il numero.</span></div></li>
+    <li><div><b>Il sito collegato alla tua scheda Google</b><span>Ti aiuto a collegarlo, così chi ti trova su Google e Maps può aprirlo con un tocco.</span></div></li>
+    <li><div><b>Un interlocutore solo</b><span>Parli con me dall'inizio alla fine, senza passaggi di mano.</span></div></li>
+  </ul>
+  <div class="tags">
+    <span class="tag">Officine</span><span class="tag">Idraulici</span><span class="tag">Elettricisti</span><span class="tag">Parrucchieri</span><span class="tag">Giardinieri</span><span class="tag">Piccoli negozi</span>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Come lavoro</h2>
+  <ol class="steps">
+    <li><div><b>Ci parliamo</b><span>Quindici minuti al telefono o di persona: cosa fai, chi vuoi raggiungere, cosa vuoi che facciano i clienti.</span></div></li>
+    <li><div><b>Ti dico cosa farei e quanto costa</b><span>Cosa è compreso, quanto tempo serve e il prezzo, prima di iniziare.</span></div></li>
+    <li><div><b>Costruisco il sito e lo rivediamo insieme</b><span>Mi mandi foto e informazioni, io preparo la pagina e la correggiamo finché va bene a te.</span></div></li>
+  </ol>
+</section>
+
+<section class="section formCard" id="contatti">
+  <h2>Scrivimi due righe 👋</h2>
+  <p>Dimmi chi sei e cosa ti servirebbe. Ti rispondo io, di persona, appena posso.</p>
+
+  <form id="contact" novalidate>
+    <div class="field"><label for="nome">Come ti chiami?</label><input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Nome e cognome"></div>
+    <div class="field"><label for="attivita">Che lavoro fai?</label><input type="text" id="attivita" name="attivita" placeholder="Es. officina, idraulico, parrucchiera…"></div>
+    <div class="field"><label for="zona">In che zona lavori?</label><input type="text" id="zona" name="zona" placeholder="Es. Quarto Oggiaro, Bovisa, Bollate"></div>
+
+    <fieldset class="field">
+      <legend>Di cosa avresti bisogno?</legend>
+      <label class="choice"><input type="radio" name="bisogno" value="Un sito che si legge bene da telefono"> Un sito che si legge bene da telefono</label>
+      <label class="choice"><input type="radio" name="bisogno" value="Sistemare la scheda Google"> Sistemare la scheda Google</label>
+      <label class="choice"><input type="radio" name="bisogno" value="Sito e scheda Google"> Entrambi: sito e scheda Google</label>
+      <label class="choice"><input type="radio" name="bisogno" value="Non lo so ancora, vorrei parlarne"> Non lo so ancora, vorrei parlarne</label>
+    </fieldset>
+
+    <div class="field"><label for="messaggio">Qualcosa da aggiungere?</label><textarea id="messaggio" name="messaggio" placeholder="Raccontamelo con le tue parole…"></textarea></div>
+
+    <button class="btn" type="submit">💬 Scrivimi su WhatsApp</button>
+    <p class="small">Si aprirà WhatsApp con il messaggio già scritto: lo invii tu, solo se e quando vuoi. Non salvo i dati del form; raccolgo solo statistiche di visita anonime, senza cookie.</p>
+  </form>
+
+  <div class="done" id="done" role="status" aria-live="polite">
+    <p>Quasi fatto! Se WhatsApp non si è aperto, <a id="waLink" href="#" target="_blank" rel="noopener">tocca qui per continuare la conversazione</a>.</p>
+  </div>
+</section>
+
+<footer>Federico Croletti · Siti web e assistenza informatica · Milano · <a href="./">chi sono</a></footer>
+</main>
+
+<script>
+(function () {
+  var WA_NUMBER = "393894658277";
+  var ANALYTICS = { domain: "federicocroletti-tech.github.io", endpoint: "https://plausible.io/api/event" };
+
+  var form = document.getElementById("contact");
+  var done = document.getElementById("done");
+  var waLink = document.getElementById("waLink");
+
+  function pageUrl() {
+    var params = new URLSearchParams(location.search);
+    var kept = new URLSearchParams();
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach(function (k) {
+      if (params.get(k)) kept.set(k, params.get(k));
+    });
+    var query = kept.toString();
+    return location.origin + location.pathname + (query ? "?" + query : "");
+  }
+
+  function referrerOrigin() {
+    try { return document.referrer ? new URL(document.referrer).origin : undefined; } catch (e) { return undefined; }
+  }
+
+  function track(name, props) {
+    if (location.hostname !== ANALYTICS.domain) return;
+    if (navigator.doNotTrack === "1" || navigator.globalPrivacyControl) return;
+    var body = { name: name, url: pageUrl(), domain: ANALYTICS.domain, referrer: referrerOrigin() };
+    if (props) body.props = props;
+    try {
+      fetch(ANALYTICS.endpoint, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(body), keepalive: true })
+        .catch(function () {});
+    } catch (e) {}
+  }
+
+  track("pageview");
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest ? e.target.closest("[data-track]") : null;
+    if (!el) return;
+    var name = el.getAttribute("data-track-name");
+    track(el.getAttribute("data-track"), name ? { name: name } : undefined);
+  });
+
+  function value(name) {
+    var el = form.elements[name];
+    return el && el.value ? el.value.trim() : "";
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+
+    var nome = value("nome");
+    var attivita = value("attivita");
+    var zona = value("zona");
+    var bisogno = (form.querySelector('input[name="bisogno"]:checked') || {}).value || "";
+    var messaggio = value("messaggio");
+
+    var lines = ["Ciao Federico, sono " + nome + "."];
+    if (attivita) lines.push("Faccio questo lavoro: " + attivita + (zona ? " (" + zona + ")" : ""));
+    else if (zona) lines.push("Lavoro in zona: " + zona);
+    if (bisogno) lines.push("Mi servirebbe: " + bisogno);
+    if (messaggio) lines.push("", messaggio);
+    lines.push("", "(Messaggio inviato dalla pagina per artigiani)");
+
+    var url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+    waLink.href = url;
+    track("form_submit");
+    done.classList.add("show");
+    done.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+    if (!window.open(url, "_blank", "noopener")) {
+      window.location.href = url;
+    }
+  });
+})();
+</script>
+</body>
+</html>

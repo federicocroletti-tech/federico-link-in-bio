@@ -15,6 +15,7 @@ file. Gli strumenti in `tools/` servono solo a rigenerare le immagini.
 | Percorso | Contenuto |
 |---|---|
 | `index.html` | Pagina completa (stili e script inclusi) |
+| `artigiani.html` | Pagina per artigiani e piccole attività, usata dai messaggi di contatto diretto (stessi stili e tracciamento) |
 | `assets/` | Foto, logo, immagine social `og.jpg`, font Plus Jakarta Sans e Source Serif 4 |
 | `social/` | Sorgenti HTML e output di copertine in evidenza, QR, biglietto da visita e volantino |
 | `docs/` | Guide per profilo Instagram, calendario contenuti, Google Business Profile, testimonianze, statistiche |
