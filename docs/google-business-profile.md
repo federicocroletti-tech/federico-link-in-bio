@@ -5,10 +5,23 @@ su Google, non su Instagram. Una scheda Google gratuita ti fa comparire nelle
 ricerche locali e su Maps, e le recensioni contano molto. È l'azione con il
 miglior rapporto sforzo/risultato per un'attività di servizi a Milano.
 
-La scheda va creata dal tuo account Google (verifica richiesta): qui sono
-pronti tutti i testi.
+La scheda esiste già: "Federico Croletti - Consulente Informatico", verificata,
+5,0 con 28 recensioni, gestita dall'account `federico.croletti@gmail.com`
+(rilevato il 24 novembre 2026). Quindi non va creata: vanno sistemati i campi.
 
-## 1. Creazione
+## Stato e interventi
+
+| Campo | Stato | Azione |
+|---|---|---|
+| Profili social | Solo LinkedIn | Instagram aggiunto il 24/11, in revisione Google |
+| Categorie | 10, tre fuori tema | Tolte "Club di informatica", "Società di networking aziendale", "Istituto di formazione per l'utilizzo di software"; aggiunta "Web designer" (in revisione) |
+| Servizi | Solo "Consulenza informatica" sotto ogni categoria | Da fare dopo l'approvazione delle categorie, con l'elenco nella sezione 2 |
+| Orari | 9:00-17:00 tutti i giorni, domenica compresa | Da fare: indicare gli orari in cui rispondi davvero |
+| Nome | Contiene "- Consulente Informatico" | Da valutare: le norme di Google sconsigliano descrizioni nel nome |
+| Recensioni | Una "non pubblicata" a nome del gestore | Da fare: eliminarla, perché scritta sul proprio profilo |
+| Sito web | Portfolio senza UTM | Da fare: sostituire con il link con `utm_source=google` (sezione 2) |
+
+## 1. Se dovessi ricrearla
 
 1. Vai su <https://www.google.com/business/> e accedi con l'account che vuoi
    legare all'attività (meglio uno personale/professionale, non quello aziendale
