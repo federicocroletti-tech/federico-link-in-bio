@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Federico Croletti — Siti web e soluzioni digitali</title>
+<meta name="description" content="Sono Federico, sviluppatore frontend a Milano. Realizzo siti web, landing page e soluzioni digitali per professionisti e piccole attività.">
+<meta name="theme-color" content="#0b1821">
+<meta property="og:title" content="Federico Croletti — Siti web e soluzioni digitali">
+<meta property="og:description" content="Il tuo lavoro merita di essere visto come si deve. Scrivimi su WhatsApp e raccontami la tua idea.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico">
+<style>
+@font-face{font-family:"Plus Jakarta Sans";src:url(assets/fonts/plus-jakarta-sans-latin.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url(assets/fonts/source-serif-4-latin.woff2) format("woff2");font-weight:200 900;font-display:swap}
+:root{
+  --bg:#0b1821;--bg-soft:#112531;--line:#21404f;
+  --ink:#edf6f8;--muted:#a9bdb8;
+  --accent:#58c6a2;--accent-strong:#7ee4be;
+  --slate:#34495e;--green:#357662;
+  --paper:#f5fbfd;--paper-ink:#10202b;--paper-line:#cfdcd8;
+  --sans:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;color:var(--ink);font-family:var(--sans);background:linear-gradient(180deg,#0a151d 0%,var(--bg) 48%,#0e202b 100%);min-height:100vh}
+.wrap{max-width:720px;margin:auto;padding:14px}
+
+.hero{height:680px;border-radius:32px;overflow:hidden;position:relative;background:var(--bg-soft)}
+.hero img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:56% 28%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,24,33,.1) 0%,rgba(11,24,33,0) 30%,rgba(11,24,33,.94) 100%)}
+.brand{position:absolute;z-index:2;top:18px;left:18px;background:#fff;border-radius:16px;padding:7px 12px;display:flex}
+.brand img{height:34px;width:auto;display:block}
+.heroText{position:absolute;z-index:2;bottom:34px;left:30px;right:30px}
+.kicker{font-size:12px;letter-spacing:2.2px;text-transform:uppercase;color:var(--accent-strong);font-weight:700}
+h1{font-family:var(--serif);font-size:50px;line-height:1.04;font-weight:600;margin:13px 0}
+.heroText p{font-size:17px;line-height:1.55;margin:0;color:#dbe9e6}
+.btn{display:inline-block;width:100%;margin-top:23px;border:0;border-radius:15px;padding:16px;background:linear-gradient(135deg,#8cebc7,#58c6a2);color:#06110d;font:700 16px var(--sans);text-align:center;text-decoration:none;cursor:pointer}
+.heroText .btn{width:auto;padding:15px 26px;margin-top:22px}
+.btn:hover{filter:brightness(1.06)}
+:focus-visible{outline:3px solid #f3c969;outline-offset:3px}
+
+.section{background:var(--bg-soft);border:1px solid var(--line);border-radius:28px;padding:32px 28px;margin-top:14px}
+h2{font-family:var(--serif);font-size:31px;font-weight:600;margin:0 0 17px;line-height:1.15}
+p{font-family:var(--serif);font-size:18px;line-height:1.65;margin:0 0 15px;color:#dbe9e6}
+.bigQuote{font-family:var(--serif);font-size:27px;line-height:1.32;margin:24px 0;padding-left:18px;border-left:4px solid var(--accent);color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{padding:9px 14px;border:1px solid var(--green);border-radius:999px;font-size:13px;font-weight:600;background:rgba(53,118,98,.22);color:var(--accent-strong)}
+
+.projects{display:grid;gap:10px;margin-top:6px}
+.project{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-left:4px solid var(--slate);border-radius:16px;padding:16px 18px;background:#0e202b}
+.project:hover{border-left-color:var(--accent);background:#132a37}
+.project strong{display:block;font-size:16px}
+.project span{display:block;font-size:14px;line-height:1.5;color:var(--muted);margin-top:4px}
+.project em{font-style:normal;font-size:12px;color:var(--accent-strong);font-weight:700;letter-spacing:.4px}
+
+.formCard{background:var(--paper);color:var(--paper-ink);border-color:#dbe8e4}
+.formCard h2{color:var(--paper-ink)}
+.formCard p{color:#33495a}
+.field{margin-top:22px;border:0;padding:0;min-width:0}
+.field label,.field legend{display:block;font-family:var(--serif);font-size:17px;font-weight:600;margin-bottom:9px;padding:0}
+input[type=text],textarea{width:100%;border:1px solid var(--paper-line);border-radius:13px;background:#fff;color:var(--paper-ink);padding:13px;font:16px var(--sans);outline:none}
+input[type=text]:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(88,198,162,.35)}
+textarea{min-height:100px;resize:vertical}
+.field .choice{display:flex;align-items:center;gap:11px;border:1px solid var(--paper-line);border-radius:13px;padding:13px;margin:9px 0;background:#fff;font:500 15px var(--sans);cursor:pointer}
+.choice input{width:18px;height:18px;margin:0;accent-color:var(--green);flex:none}
+.choice:has(input:checked){border-color:var(--green);background:#e6f5ef}
+.small{font:12px/1.5 var(--sans)!important;color:#5b6f7a!important;margin:14px 0 0!important}
+.done{display:none;text-align:center;padding:18px;margin-top:20px;border-radius:16px;background:#e6f5ef;border:1px solid var(--green)}
+.done.show{display:block}
+.done p{font-size:16px;margin:0 0 6px}
+.done a{color:var(--green);font-weight:700}
+
+footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 0 14px}
+
+@media(max-width:600px){
+  .wrap{padding:8px}
+  .hero{height:620px;border-radius:25px}
+  .heroText{left:23px;right:23px;bottom:27px}
+  h1{font-size:39px}
+  .section{padding:27px 21px;border-radius:23px}
+  h2{font-size:27px}
+  p{font-size:17px}
+  .bigQuote{font-size:23px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<section class="hero">
+  <img class="photo" src="assets/federico.webp" alt="Federico Croletti">
+  <a class="brand" href="#" aria-label="Federico Croletti"><img src="assets/logo.webp" alt="Logo FC"></a>
+  <div class="heroText">
+    <div class="kicker">Federico Croletti · Siti web e soluzioni digitali</div>
+    <h1>Il tuo lavoro merita di essere visto come si deve.</h1>
+    <p>Sono Federico, sviluppatore frontend a Milano. Costruisco siti e strumenti digitali per professionisti e piccole attività. Ti racconto come lavoro e come potrei aiutarti.</p>
+    <a class="btn" href="#contatti">Parliamone</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>La mia storia</h2>
+  <p>Passo le mie giornate a costruire interfacce: pagine, schermate e strumenti che devono essere chiari e funzionare bene. È il mio mestiere e mi appassiona davvero.</p>
+  <p>Guardandomi intorno ho notato una cosa: tante persone che lavorano benissimo, come artigiani, professionisti e piccole attività di quartiere, online sono quasi invisibili. Oppure hanno un sito che non le rappresenta.</p>
+  <div class="bigQuote">“E se mettessi le mie competenze al servizio di chi il proprio lavoro lo fa con le mani e con la testa?”</div>
+  <p>Da questa domanda sono nati progetti concreti, come il sito di un giardiniere di Milano, e diverse demo che puoi vedere qui sotto.</p>
+</section>
+
+<section class="section">
+  <h2>Quello che costruisco</h2>
+  <p>Non vendo pacchetti già confezionati. Ascolto cosa ti serve, chi vuoi raggiungere e quale azione vuoi rendere semplice, come una chiamata, un messaggio su WhatsApp o una richiesta di preventivo. Poi costruisco di conseguenza.</p>
+  <p>Sono sempre in cammino e mi piace così. Imparo ogni giorno, sperimento cose nuove come mappe, AI e automazioni, e porto ciò che funziona nei progetti per chi ne ha bisogno.</p>
+  <div class="tags">
+    <span class="tag">Siti vetrina</span>
+    <span class="tag">Landing page</span>
+    <span class="tag">WordPress</span>
+    <span class="tag">Assistenza informatica</span>
+    <span class="tag">Soluzioni su misura</span>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Cosa ho realizzato</h2>
+  <div class="projects">
+    <a class="project" href="https://daniel-pantuso-giardiniere-site.onrender.com/" target="_blank" rel="noopener">
+      <strong>Daniel Pantuso · Giardiniere a Milano</strong>
+      <span>Sito vetrina con servizi, lavori e richiesta di preventivo via WhatsApp.</span>
+    </a>
+    <a class="project" href="https://menu-smart-qr.onrender.com/" target="_blank" rel="noopener">
+      <em>DEMO</em>
+      <strong>Menu Smart QR</strong>
+      <span>Menu digitale per smartphone: lingue, piatti, prezzi e contatti rapidi.</span>
+    </a>
+    <a class="project" href="https://federico-croletti-site.onrender.com/" target="_blank" rel="noopener">
+      <strong>Il mio portfolio completo</strong>
+      <span>Tutti i progetti, le demo e i servizi in un unico posto.</span>
+    </a>
+  </div>
+</section>
+
+<section class="section formCard" id="contatti">
+  <h2>Adesso conosciamoci 👋</h2>
+  <p>Se sei arrivata/o fin qui, forse hai un’attività, un’idea o un problema digitale che ti toglie tempo. Mi piacerebbe sapere chi sei e cosa stai cercando.</p>
+
+  <form id="contact" novalidate>
+    <div class="field"><label for="nome">Come ti chiami?</label><input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Nome e cognome"></div>
+    <div class="field"><label for="citta">Da dove mi scrivi? 📍</label><input type="text" id="citta" name="citta" autocomplete="address-level2" placeholder="Città"></div>
+    <div class="field"><label for="attivita">Di cosa ti occupi?</label><input type="text" id="attivita" name="attivita" placeholder="Es. parrucchiera, idraulico, studio legale…"></div>
+
+    <fieldset class="field">
+      <legend>Com’è oggi la tua presenza online?</legend>
+      <label class="choice"><input type="radio" name="situazione" value="Non ho ancora un sito"> Non ho ancora un sito</label>
+      <label class="choice"><input type="radio" name="situazione" value="Ho un sito ma è vecchio o poco chiaro"> Ho un sito ma è vecchio o poco chiaro</label>
+      <label class="choice"><input type="radio" name="situazione" value="Ho un sito e vorrei migliorarlo"> Ho un sito e vorrei migliorarlo</label>
+      <label class="choice"><input type="radio" name="situazione" value="Non so da dove cominciare"> Non so da dove cominciare</label>
+    </fieldset>
+
+    <fieldset class="field">
+      <legend>Di cosa avresti bisogno?</legend>
+      <label class="choice"><input type="checkbox" name="bisogno" value="Un sito vetrina"> Un sito vetrina</label>
+      <label class="choice"><input type="checkbox" name="bisogno" value="Una landing page"> Una landing page</label>
+      <label class="choice"><input type="checkbox" name="bisogno" value="Assistenza informatica (PC, email, PEC, SPID)"> Assistenza informatica (PC, email, PEC, SPID)</label>
+      <label class="choice"><input type="checkbox" name="bisogno" value="Un’idea su misura (app, mappe, automazioni)"> Un’idea su misura (app, mappe, automazioni)</label>
+    </fieldset>
+
+    <div class="field"><label for="messaggio">Raccontami la tua idea</label><textarea id="messaggio" name="messaggio" placeholder="Raccontamelo con le tue parole…"></textarea></div>
+
+    <button class="btn" type="submit">💬 Scrivimi su WhatsApp</button>
+    <p class="small">Si aprirà WhatsApp con il messaggio già scritto: lo invii tu, solo se e quando vuoi. Non salvo nessun dato su questa pagina.</p>
+  </form>
+
+  <div class="done" id="done" role="status" aria-live="polite">
+    <p>Quasi fatto! Se WhatsApp non si è aperto, <a id="waLink" href="#" target="_blank" rel="noopener">tocca qui per continuare la conversazione</a>.</p>
+  </div>
+</section>
+
+<footer>Federico Croletti · Siti web e soluzioni digitali · Milano</footer>
+</main>
+
+<script>
+(function () {
+  var WA_NUMBER = "393894658277";
+  var form = document.getElementById("contact");
+  var done = document.getElementById("done");
+  var waLink = document.getElementById("waLink");
+
+  function value(name) {
+    var el = form.elements[name];
+    return el && el.value ? el.value.trim() : "";
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+
+    var nome = value("nome");
+    var citta = value("citta");
+    var attivita = value("attivita");
+    var situazione = (form.querySelector('input[name="situazione"]:checked') || {}).value || "";
+    var bisogni = Array.prototype.map.call(form.querySelectorAll('input[name="bisogno"]:checked'), function (i) { return i.value; });
+    var messaggio = value("messaggio");
+
+    var lines = ["Ciao Federico, sono " + nome + (citta ? " (" + citta + ")" : "") + "."];
+    if (attivita) lines.push("Mi occupo di: " + attivita);
+    if (situazione) lines.push("Presenza online: " + situazione);
+    if (bisogni.length) lines.push("Mi servirebbe: " + bisogni.join(", "));
+    if (messaggio) lines.push("", messaggio);
+    lines.push("", "(Messaggio inviato dalla tua pagina)");
+
+    var url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+    waLink.href = url;
+    done.classList.add("show");
+    done.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+    if (!window.open(url, "_blank", "noopener")) {
+      window.location.href = url;
+    }
+  });
+})();
+</script>
+</body>
+</html>
